@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import CartItem from '../components/CartItem'
@@ -13,6 +13,9 @@ const Cart = () => {
     const totalProducts = useSelector(state => state.cart.totalQuantity)
 
     const cartProducts = productData.getCartItemsDetail(cartItems);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <Helmet title='Giỏ hàng'>
             <div className="cart">

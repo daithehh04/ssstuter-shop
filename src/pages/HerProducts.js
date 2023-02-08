@@ -88,6 +88,9 @@ const HerProducts = () => {
         updateProducts();
         console.log('3')
     }, [updateProducts]);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <Helmet title='FOR HER'>
             <div className="catalog-header">

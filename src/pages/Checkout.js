@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../components/CartItem';
 import Helmet from '../UI/Helmet'
@@ -38,6 +38,9 @@ const Checkout = () => {
     const cartItems = useSelector(state => state.cart.cartItems)
     const cartProducts = productData.getCartItemsDetail(cartItems);
     const totalPrice = useSelector(state => state.cart.totalAmount)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const removeCartItem = () => {
         dispatch(cartActions.removeAllItem())
     }

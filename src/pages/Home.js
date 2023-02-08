@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeroSlide from '../components/HeroSlide'
 import Helmet from '../UI/Helmet'
 import heroSlideData from '../assets/data/hero-slider'
@@ -10,7 +10,11 @@ import SsstuterBg from '../components/SsstuterBg'
 import BestSellerList from '../components/BestSellerList'
 import Grid from '../UI/Grid'
 
+
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <Helmet title='TRANG CHỦ'>
             {/* HeroSlider */}
