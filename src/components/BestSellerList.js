@@ -19,7 +19,6 @@ const BestSellerList = () => {
                         arrows: true,
                     }}
                 >
-
                     {productData.getAllProducts().map((item, index) => (
                         <SplideSlide key={index}>
                             <BestSellerCard

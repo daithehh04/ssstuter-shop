@@ -40,6 +40,7 @@ const ProductDetail = () => {
                 <Grid col={4} mdCol={2} smCol={1} gap={20}>
                     {relatedProducts.map((item, index) => (
                         <ProductCard
+                            numColor={item.colors.length}
                             key={index}
                             img01={item.image01}
                             name={item.title}
@@ -79,6 +80,7 @@ const ProductDetail = () => {
                                 <ProductCard
                                     img01={item.image01}
                                     name={item.title}
+                                    numColor={item.colors.length}
                                     price={Number(item.price)}
                                     price_old={Number(item.price_old)}
                                     slug={item.slug}
