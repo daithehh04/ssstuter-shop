@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Helmet from '../UI/Helmet'
 import ProductCard from '../components/ProductCard'
 import productData from '../assets/data/products'
@@ -7,6 +7,7 @@ import size from '../assets/data/product-size'
 import color from '../assets/data/product-color'
 import CheckBox from '../components/CheckBox'
 import Grid from '../UI/Grid'
+import Button from '../UI/Button'
 const HerProducts = () => {
     const initFilter = {
         category: [],
@@ -53,6 +54,10 @@ const HerProducts = () => {
         }
     };
 
+    const filterRef = useRef()
+    const showHideFilter = () => {
+        filterRef.current.classList.toggle('active');
+    };
 
     const updateProducts = useCallback(() => {
         console.log('updateProducts')
@@ -94,7 +99,10 @@ const HerProducts = () => {
                 </p>
             </div>
             <div className='catalog'>
-                <div className='catalog-filter'>
+                <div className='catalog-filter' ref={filterRef}>
+                    <div className='catalog-filter_close' onClick={showHideFilter}>
+                        <i class="ri-arrow-left-line"></i>
+                    </div>
                     <div className="catalog-filter_widget">
                         <div className="catalog-filter_widget_title"> Danh mục sản phẩm</div>
                         <div className="catalog-filter_widget_content">
@@ -137,6 +145,11 @@ const HerProducts = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className="catalog-filter_toggle">
+                    <Button size="sm" onClick={showHideFilter}>
+                        Bộ lọc
+                    </Button>
                 </div>
                 <div className='catalog-content'>
                     <Grid col={3} mdCol={2} smCol={1}>
