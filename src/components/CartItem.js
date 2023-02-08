@@ -38,12 +38,12 @@ const CartItem = (props) => {
                 <div className="cart-item_info_price">{numWithCommas(item.price)}</div>
                 <div className="cart-item_info_quantity">
                     <div className="product-info_item_quantity">
-                        <div className="product-info_item_quantity_btn" onClick={() => updateQuantity('+')}>
-                            <i class="ri-add-line"></i>
-                        </div>
-                        <div className="product-info_item_quantity_input">{quantity}</div>
                         <div className="product-info_item_quantity_btn" onClick={() => updateQuantity('-')}>
                             <i class="ri-subtract-line"></i>
+                        </div>
+                        <div className="product-info_item_quantity_input">{quantity}</div>
+                        <div className="product-info_item_quantity_btn" onClick={() => updateQuantity('+')}>
+                            <i class="ri-add-line"></i>
                         </div>
                     </div>
                 </div>

@@ -24,8 +24,8 @@ const BestSellerList = () => {
                             <BestSellerCard
                                 slug={item.slug}
                                 name={item.title}
-                                img1={item.image01}
-                                img2={item.image02}
+                                img01={item.image01}
+                                img02={item.image02}
                                 price={item.price}
                                 price_old={item.price_old}
                             />
