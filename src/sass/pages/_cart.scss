@@ -1,0 +1,104 @@
+.cart {
+    display: flex;
+
+    &-info {
+        position: sticky;
+        top: 80px;
+        box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
+        margin:30px 10px 30px 0;
+        padding: 20px;
+        width: 40%;
+        height: max-content;
+        &_txt {
+            .cart-info_txt_price {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                & span:nth-child(2) {
+                    font-size: 2.4rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        &_btn {
+            &_checkout, &_continue{
+                margin-top: 20px;
+                padding: 10px 0;
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+    &-list {
+        flex-grow: 1;
+        margin-top: 30px;
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            &_img {
+                margin: 0 20px;
+                img{
+                    object-fit: cover;
+                    height: 150px;
+                }
+            }
+            &_info {
+                display: flex;
+                flex-grow: 1;
+                align-items: center;
+                justify-content: space-between;
+                &_quantity {
+                    .product-info_item_quantity {
+                        display: flex;
+                        &_btn, &_input {
+                            align-items: center;
+                            display: flex;
+                            height: 30px;
+                            justify-content: center;
+                        }
+                        &_btn {
+                            border: 2px solid #8d8d8d;
+                            cursor: pointer;
+                            font-size: 1.5rem;
+                            width: 30px;
+                        }
+                        &_input {
+                            width: 90px;
+                            border-bottom: 2px solid #8d8d8d;
+                            border-top: 2px solid #8d8d8d;
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+            &_del i {
+                font-size: 1.8rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cart {
+        flex-direction: column;
+        &-info {
+            width: 100%;
+            position: relative;
+            top: auto;
+        }
+        &-list {
+            .cart-item {
+                &_info {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    &>* {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 6px 0;
+    font-size: 1.4rem;
+    input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        &:checked~.custom-checkbox__checkmark {
+            background-color: #000;
+            border: 1px solid #000;
+            color: #fff;
+            i {
+                display: block;
+            }
+        }
+    }
+    &__checkmark {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #8d8d8d;
+        margin-right: 8px;
+        i {
+            margin-top: -4px;
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.hero-slide__item__mobile {
+    display: none;
+}
+@include mobile {
+    .hero-slide__item__tablet {
+        display: none;
+    }
+    .hero-slide__item__mobile {
+        display: block;
+    }
+}

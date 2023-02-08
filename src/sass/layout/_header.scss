@@ -1,0 +1,171 @@
+.header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88px;
+    padding-top: 30px;
+    z-index: 99;
+    transition: all 0.3s ease;
+     .wrapper {
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header-menu {
+            display: none;
+        }
+        .navigate .icon-close {
+            display: none;
+        }
+        .navigate ul {
+            display: flex;
+            li {
+                margin-left: 44px;
+                a::after {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    content: "";
+                    width: 0%;
+                    height: 4px;
+                    background: #000;
+                    transition: all ease-in 0.3s;
+                }
+                a {
+                    position: relative;
+                    font-size: 1.6rem;
+                    color: #000;
+                   &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+             li:first-child {
+                margin-left: 0;
+            }
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -50px;
+            width: 38px;
+             img {
+                width: 100%;
+            }
+            &-txt {
+                display: none;
+            }
+        }
+        .nav-icons {
+            display: flex;
+            span {
+                margin-right: 46px;
+            }
+            span:last-child {
+                margin-right: 0;
+            }
+            span i {
+                font-size: 2rem;
+            }
+
+            .cart-icon {
+                position: relative;
+                .badge {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: -4px;
+                    right: -4px;
+                    background: #C50C0C;
+                    color: #fff;
+                    width: 16px;
+                    height: 16px;
+                    font-size: 1rem;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .nav-active {
+        font-weight: 500;
+    }
+    &.shrink {
+        height: 80px;
+        padding-top: 20px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+}
+
+@include tablet {
+    .header {
+        box-shadow: 0 8px 24px hsl(210deg 8% 62% / 20%);
+        padding-top: 20px;
+        height: 80px;
+        .wrapper {
+            .header-menu {
+                display: block;
+                font-size: 2.4rem;
+                cursor: pointer;
+            }
+            .navigate{
+                &-list {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background: #fff;
+                    z-index: 9999;
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease;
+                    ul {
+                        margin-top: -32px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: flex-start;
+                        li {
+                            margin-top: 8px;
+                            margin-left: 0;
+                        }
+                    }
+
+                    .icon-close {
+                        padding: 12px 0 0 20px;
+                        font-size: 2.4rem;
+                        cursor: pointer;
+                    }
+                }
+                &-list.active {
+                    transform: translateX(0);
+                }
+                
+            }
+            .navigate .icon-close {
+                display: block;
+            }
+        }
+        
+    }
+}
+@include mobile {
+    .header {
+        .wrapper {
+            .logo {
+                & img {display: none;}
+                &-txt {
+                    display: block;
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+            }
+            
+        }
+        
+    }
+}
+

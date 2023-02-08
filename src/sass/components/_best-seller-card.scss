@@ -1,0 +1,100 @@
+.best-seller__card {
+    margin-top: 50px;
+    &__slider {
+        margin-top: 50px;
+        display: flex;
+        overflow: auto;
+    }
+    &__image {
+        display: flex;
+        width: 90%;
+        overflow: auto;
+        img {
+            width: 400px;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        margin-left: -40px;
+        .card-name {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        .sub-text {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-top: 40px;
+        }
+        .card-img {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            img {
+                width: 80px;
+            }
+        }
+        .price-old {
+            text-decoration-line: line-through;
+            font-size: 3.6rem;
+            font-weight: 300;
+            color: rgb(123, 120, 120);
+        }
+        .price-new {
+            font-size: 4.4rem;
+            color: #C50C0C;
+        }
+    }
+}
+@include tablet {
+    .best-seller__card {
+        &__image {
+            width: 88%;
+            img {
+                width: 80%;
+                object-fit: cover;
+            }
+        }
+        &__info {
+            margin-left: -40px;
+            width: 100%;
+            .card-name {
+                font-size: 2.8rem;
+                margin-bottom: 20px;
+            }
+            .sub-text {
+                font-size: 3rem;
+                margin-top: 20px;
+            }
+            .card-img {
+                img {
+                    width: 70px;
+                }
+            }
+            .price-old {
+                font-size: 3.4rem;
+            }
+            .price-new {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .best-seller__card {
+        &__image {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 500px;
+            overflow-y: scroll;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__info {
+            display: none;
+        }
+    }
+}
