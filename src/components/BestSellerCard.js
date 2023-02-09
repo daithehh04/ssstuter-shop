@@ -10,6 +10,7 @@ const BestSellerCard = (props) => {
                     <div className="best-seller__card__image">
                         <img src={props.img01} alt="" />
                         <img src={props.img02} alt="" />
+                        <img src={props.img02} alt="" />
                     </div>
                 </Link>
                 <div className="best-seller__card__info">
