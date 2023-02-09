@@ -7,6 +7,7 @@ import ProductDetail from '../pages/ProductDetail'
 import Cart from '../pages/Cart'
 import Checkout from '../pages/Checkout'
 import Success from '../pages/Success'
+import NotFound from '../components/NotFound'
 
 const Routers = () => {
     return (
@@ -18,6 +19,7 @@ const Routers = () => {
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<Success />} />
+            <Route path='*' element={<NotFound />} />
         </Routes>
     )
 }
