@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Description from '../components/Description'
 import { cartActions } from '../redux/cartSlice/cartSlice';
 import { toast } from 'react-toastify'
@@ -10,7 +10,6 @@ const ProductView = (props) => {
     let product = props.product;
     const { price, title, slug } = product
     const dispatch = useDispatch()
-    const cartItems = useSelector(state => state.cart.cartItems)
 
     if (product === undefined)
         product = {
@@ -56,18 +55,23 @@ const ProductView = (props) => {
                 size,
             }))
             toast.success('Sản phẩm đã được thêm thành công!')
-            console.log(cartItems)
         }
     }
     return (
         <div className='product'>
             <div className='product-images'>
                 <div className="product-images_list">
-                    <div className="product-image_list_item" onClick={() => setPreviewImg(product.image01)}>
+                    <div className="product-images_list_item" onClick={() => setPreviewImg(product.image01)}>
                         <img src={product.image01} alt="" />
                     </div>
-                    <div className="product-image_list_item" onClick={() => setPreviewImg(product.image02)}>
+                    <div className="product-images_list_item" onClick={() => setPreviewImg(product.image02)}>
                         <img src={product.image02} alt="" />
+                    </div>
+                    <div className="product-images_list_item" onClick={() => setPreviewImg(product.image03)}>
+                        <img src={product.image03} alt="" />
+                    </div>
+                    <div className="product-images_list_item" onClick={() => setPreviewImg(product.image04)}>
+                        <img src={product.image04} alt="" />
                     </div>
                 </div>
                 <div className="product-images_main">

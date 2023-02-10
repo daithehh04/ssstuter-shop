@@ -144,12 +144,26 @@
         flex-direction: column;
         .product-images {
             width: 100%;
+            flex-direction:column-reverse ;
             &_list {
-                width: 30%;
+                display: flex;
+                width: 100%;
+                padding-top: 23%;
+                overflow: auto;
+                &_item {
+                    margin-right: 10px;
+                    margin-top: 30px;
+                    img {
+                        width: 160px;
+                        object-fit: cover;
+                    }
+                }
             }
             &_main {
                 img {
+                    padding-left: 0;
                     width: 100%;
+                    object-fit: cover;
                 }
             }
             .product-description {

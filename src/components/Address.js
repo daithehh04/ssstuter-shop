@@ -1,68 +1,54 @@
-import React from 'react'
-import axios from 'axios';
-import $ from 'jquery';
-
+import React, { useEffect, useState } from 'react'
+import { apiGetDistrict, apiGetProvinces, apiGetWards } from '../api/address'
 
 const Address = () => {
-    const host = 'https://provinces.open-api.vn/api/';
-    var callAPI = (api) => {
-        return axios.get(api).then((response) => {
-            renderData(response.data, 'province');
-        });
-    };
-    callAPI('https://provinces.open-api.vn/api/?depth=1');
-    var callApiDistrict = (api) => {
-        return axios.get(api).then((response) => {
-            renderData(response.data.districts, 'district');
-        });
-    };
-    var callApiWard = (api) => {
-        return axios.get(api).then((response) => {
-            renderData(response.data.wards, 'ward');
-        });
-    };
-
-    var renderData = (array, select) => {
-        let row = ' <option disable value="">Chọn địa chỉ</option>';
-        array.forEach((element) => {
-            row += `<option value="${element.code}">${element.name}</option>`;
-        });
-        document.querySelector('#' + select).innerHTML = row;
-    };
-
-    $('#province').change(() => {
-        callApiDistrict(host + 'p/' + $('#province').val() + '?depth=2');
-        printResult();
-    });
-    $('#district').change(() => {
-        callApiWard(host + 'd/' + $('#district').val() + '?depth=2');
-        printResult();
-    });
-    $('#ward').change(() => {
-        printResult();
-    });
-
-    var printResult = () => {
-        if ($('#district').val() !== '' && $('#province').val() !== '' && $('#ward').val() !== '') {
-            let result =
-                $('#province option:selected').text() +
-                ' | ' +
-                $('#district option:selected').text() +
-                ' | ' +
-                $('#ward option:selected').text();
-            $('#result').text(result);
+    const [provinces, setProvinces] = useState([])
+    const [districts, setDistricts] = useState([])
+    const [wards, setWards] = useState([])
+    const [provinceCode, setProvinceCode] = useState()
+    const [districtCode, setDistrictCode] = useState()
+    useEffect(() => {
+        const fetchApiProvince = async () => {
+            const response = await apiGetProvinces()
+            setProvinces(response)
         }
-    };
+        fetchApiProvince()
+    }, [])
+
+    useEffect(() => {
+        const fetchApiDistrict = async () => {
+            const response = await apiGetDistrict(provinceCode)
+            setDistricts(response)
+        }
+        provinceCode && fetchApiDistrict(provinceCode)
+    }, [provinceCode])
+
+    useEffect(() => {
+        const fetchApiWards = async () => {
+            const response = await apiGetWards(districtCode)
+            setWards(response)
+        }
+        districtCode && fetchApiWards(districtCode)
+    }, [districtCode])
     return (
         <form className="address">
-            <select name="" id="province" className="address-item">
-                <option value="">* Tỉnh/ Thành phố</option>
+            <select name="" id="province" value={provinceCode} onChange={e => setProvinceCode(e.target.value)} className="address-item">
+                <option value="">Chọn địa chỉ</option>
+                {provinces.map(item => (
+                    <option key={item?.code} value={item?.code}>{item?.name}</option>
+                ))}
             </select>
-            <select name="" id="district" className="address-item">
-                <option value="">*Quận/ Huyện</option>
+            <select name="" id="district" value={districtCode} onChange={e => setDistrictCode(e.target.value)} className="address-item">
+                <option value="">Chọn địa chỉ</option>
+                {districts.map(item => (
+                    <option key={item?.code} value={item?.code}>{item?.name}</option>
+                ))}
             </select>
             <select name="" id="ward" className="address-item">
-                <option value="">*Phường / Xã</option>
+                <option value="">Chọn địa chỉ</option>
+                {wards.map(item => (
+                    <option key={item?.code} value={item?.code}>{item?.name}</option>
+                ))}
             </select>
         </form>
     )

@@ -2,8 +2,11 @@
 .product-detail_list {
     padding: 20px 0;
     &_title {
-        padding: 30px 0;
+        padding-bottom: 30px;
         font-size: 2rem;
         font-weight: 500;
+    }
+    .product-card {
+        margin-bottom: 40px;
     }
 }

@@ -30,7 +30,6 @@ const NewArrivals = () => {
                         },
                     }}
                 >
-
                     {productsData.getAllProducts().map((item, index) => (
                         <SplideSlide key={index}>
                             <ProductCard

@@ -79,6 +79,31 @@ const product_114_image_02 = require('../Image/images/nu-28.jpeg');
 const product_115_image_01 = require('../Image/images/nu-29.jpeg');
 const product_115_image_02 = require('../Image/images/nu-30.jpeg');
 
+const product_seller_image_01 = require('../Image/images/best-seller-1.jpeg')
+const product_seller_image_02 = require('../Image/images/best-seller-2.jpeg')
+const product_seller_image_03 = require('../Image/images/best-seller-3.jpeg')
+const product_seller_image_04 = require('../Image/images/best-seller-4.jpeg')
+
+const product_seller_image_05 = require('../Image/images/best-seller-5.jpeg')
+const product_seller_image_06 = require('../Image/images/best-seller-6.jpeg')
+const product_seller_image_07 = require('../Image/images/best-seller-7.jpeg')
+const product_seller_image_08 = require('../Image/images/best-seller-8.jpeg')
+
+const product_seller_image_09 = require('../Image/images/best-seller-9.jpeg')
+const product_seller_image_10 = require('../Image/images/best-seller-10.jpeg')
+const product_seller_image_11 = require('../Image/images/best-seller-11.jpeg')
+const product_seller_image_12 = require('../Image/images/best-seller-12.jpeg')
+
+const product_seller_image_13 = require('../Image/images/best-seller-13.jpeg')
+const product_seller_image_14 = require('../Image/images/best-seller-14.jpeg')
+const product_seller_image_15 = require('../Image/images/best-seller-15.jpeg')
+const product_seller_image_16 = require('../Image/images/best-seller-16.jpeg')
+
+const product_seller_image_17 = require('../Image/images/best-seller-17.jpeg')
+const product_seller_image_18 = require('../Image/images/best-seller-18.jpeg')
+const product_seller_image_19 = require('../Image/images/best-seller-19.jpeg')
+const product_seller_image_20 = require('../Image/images/best-seller-20.jpeg')
+
 const products = [
     {
         title: 'Smart Pants',
@@ -97,6 +122,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Great Life Tee',
@@ -115,6 +141,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Man Shirt',
@@ -133,6 +160,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Stone Shorts',
@@ -151,6 +179,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Felix Shirt',
@@ -169,6 +198,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Sunflower Polo Tee',
@@ -187,6 +217,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Form Jeans-Ⅱ',
@@ -205,6 +236,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Check Conrad Shirt',
@@ -223,6 +255,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Great Tee',
@@ -241,6 +274,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Laplace Shirt',
@@ -259,6 +293,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Sss.Cable-Knit Jacket',
@@ -277,6 +312,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
     {
         title: 'Classic Shirt',
@@ -295,73 +331,8 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        best_seller: 'no'
     },
-    // {
-    //     title: 'Áo thun Dinosaur 13',
-    //     price_old: '299000',
-    //     price: '189000',
-    //     image01: product_01_image_01,
-    //     image02: product_01_image_02,
-    //     categorySlug: 'ao-thun',
-    //     colors: ['white', 'red'],
-    //     slug: 'ao-thun-dinosaur-13',
-    //     size: ['s', 'm', 'xl'],
-    // },
-    // {
-    //     title: 'Áo thun Dinosaur 14',
-    //     price_old: '299000',
-    //     price: '159000',
-    //     image01: product_02_image_01,
-    //     image02: product_02_image_02,
-    //     categorySlug: 'ao-thun',
-    //     colors: ['white', 'blue'],
-    //     slug: 'ao-thun-dinosaur-14',
-    //     size: ['s', 'm'],
-    // },
-    // {
-    //     title: 'Áo thun Dinosaur 15',
-    //     price_old: '299000',
-    //     price: '190000',
-    //     image01: product_03_image_01,
-    //     image02: product_03_image_02,
-    //     categorySlug: 'ao-thun',
-    //     colors: ['red', 'blue'],
-    //     slug: 'ao-thun-dinosaur-15',
-    //     size: ['xl'],
-    // },
-    // {
-    //     title: 'Áo somi dài tay 16',
-    //     price_old: '299000',
-    //     price: '194000',
-    //     image01: product_08_image_01,
-    //     image02: product_08_image_02,
-    //     categorySlug: 'ao-somi',
-    //     colors: ['blue', 'black'],
-    //     slug: 'ao-somi-dai-tay-16',
-    //     size: ['m', 'xl'],
-    // },
-    // {
-    //     title: 'Áo somi tay dài 17',
-    //     price_old: '299000',
-    //     price: '194000',
-    //     image01: product_09_image_01,
-    //     image02: product_09_image_02,
-    //     categorySlug: 'ao-somi',
-    //     colors: ['white', 'blue'],
-    //     slug: 'ao-somi-tay-dai-17',
-    //     size: ['s', 'l', 'xl'],
-    // },
-    // {
-    //     title: 'Quần jean phong cách 18',
-    //     price_old: '299000',
-    //     price: '194000',
-    //     image01: product_10_image_01,
-    //     image02: product_10_image_02,
-    //     categorySlug: 'quan-jean',
-    //     colors: ['blue', 'black'],
-    //     slug: 'quan-jean-phong-cach-18',
-    //     size: ['s', 'm', 'l', 'xl'],
-    // },
     {
         title: 'Unum Tank',
         price_old: '299000',
@@ -379,6 +350,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Summer Set Shirt 22',
@@ -397,6 +369,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Birdie Stripped Shirt',
@@ -415,6 +388,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Unum Shirt',
@@ -433,6 +407,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Low Waist Skort',
@@ -451,6 +426,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Split Midi Skirt',
@@ -469,6 +445,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Paris Tee',
@@ -487,6 +464,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Dots Mini Skirt',
@@ -505,6 +483,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Pocket Mini Skirt',
@@ -523,6 +502,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Birdie Pants',
@@ -541,6 +521,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Bird Shirt 2022',
@@ -559,6 +540,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Mona Lis Blazer',
@@ -577,6 +559,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Compo Bodysuit',
@@ -595,6 +578,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'Poet Shirt',
@@ -613,6 +597,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
     {
         title: 'plaid shorts',
@@ -631,8 +616,114 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nu',
+        best_seller: 'no'
     },
-    // 18 products
+    {
+        title: '3cm sweater',
+        price_old: '599000',
+        price: '499000',
+        image01: product_seller_image_01,
+        image02: product_seller_image_02,
+        image03: product_seller_image_03,
+        image04: product_seller_image_04,
+        categorySlug: 'sweater',
+        colors: ['red', 'blue', 'yellow'],
+        slug: 'sweater-01',
+        size: ['l', 'xl'],
+        decription: 'Áo sơ mi nam form refined fit SSSTUTTER chất bamboo sơ vin linh hoạt FIT SHIRT',
+        color_info: 'trắng be, vàng cát, đen, xanh mint, ghi nhạt',
+        size_info: '0/1/2/3 tương ứng với S/M/L/XL ',
+        material: 'vải bamboo (thoáng mát và không nhăn)',
+        form: 'vải bamboo (thoáng mát và không nhăn)',
+        origin: 'Việt Nam',
+        gender: 'nam',
+        best_seller: 'yes'
+    },
+    {
+        title: 'CLASSIC SWEATSHIRT',
+        price_old: '599000',
+        price: '419000',
+        image01: product_seller_image_05,
+        image02: product_seller_image_06,
+        image03: product_seller_image_07,
+        image04: product_seller_image_08,
+        categorySlug: 'sweater',
+        colors: ['red', 'blue', 'white'],
+        slug: 'sweater-02',
+        size: ['m', 'l', 'xl'],
+        decription: 'Áo sơ mi nam form refined fit SSSTUTTER chất bamboo sơ vin linh hoạt FIT SHIRT',
+        color_info: 'trắng be, vàng cát, đen, xanh mint, ghi nhạt',
+        size_info: '0/1/2/3 tương ứng với S/M/L/XL ',
+        material: 'vải bamboo (thoáng mát và không nhăn)',
+        form: 'vải bamboo (thoáng mát và không nhăn)',
+        origin: 'Việt Nam',
+        gender: 'nam',
+        best_seller: 'yes'
+    },
+    {
+        title: 'ORGANIC SWEATER',
+        price_old: '649000',
+        price: '539000',
+        image01: product_seller_image_09,
+        image02: product_seller_image_10,
+        image03: product_seller_image_11,
+        image04: product_seller_image_12,
+        categorySlug: 'sweater',
+        colors: ['red', 'blue', 'black'],
+        slug: 'sweater-03',
+        size: ['s', 'm', 'l', 'xl'],
+        decription: 'Áo sơ mi nam form refined fit SSSTUTTER chất bamboo sơ vin linh hoạt FIT SHIRT',
+        color_info: 'trắng be, vàng cát, đen, xanh mint, ghi nhạt',
+        size_info: '0/1/2/3 tương ứng với S/M/L/XL ',
+        material: 'vải bamboo (thoáng mát và không nhăn)',
+        form: 'vải bamboo (thoáng mát và không nhăn)',
+        origin: 'Việt Nam',
+        gender: 'nam',
+        best_seller: 'yes'
+    },
+    {
+        title: 'TENNIS SWEATSHIRT - VER2',
+        price_old: '519000',
+        price: '449000',
+        image01: product_seller_image_13,
+        image02: product_seller_image_14,
+        image03: product_seller_image_15,
+        image04: product_seller_image_16,
+        categorySlug: 'sweater',
+        colors: ['blue', 'white', 'black'],
+        slug: 'sweater-04',
+        size: ['m', 'l', 'xl'],
+        decription: 'Áo sơ mi nam form refined fit SSSTUTTER chất bamboo sơ vin linh hoạt FIT SHIRT',
+        color_info: 'trắng be, vàng cát, đen, xanh mint, ghi nhạt',
+        size_info: '0/1/2/3 tương ứng với S/M/L/XL ',
+        material: 'vải bamboo (thoáng mát và không nhăn)',
+        form: 'vải bamboo (thoáng mát và không nhăn)',
+        origin: 'Việt Nam',
+        gender: 'nam',
+        best_seller: 'yes'
+    },
+    {
+        title: 'MATE SWEATSHIRT',
+        price_old: '359000',
+        price: '299000',
+        image01: product_seller_image_17,
+        image02: product_seller_image_18,
+        image03: product_seller_image_19,
+        image04: product_seller_image_20,
+        categorySlug: 'sweater',
+        colors: ['blue', 'white', 'red'],
+        slug: 'sweater-05',
+        size: ['s', 'm', 'l'],
+        decription: 'Áo sơ mi nam form refined fit SSSTUTTER chất bamboo sơ vin linh hoạt FIT SHIRT',
+        color_info: 'trắng be, vàng cát, đen, xanh mint, ghi nhạt',
+        size_info: '0/1/2/3 tương ứng với S/M/L/XL ',
+        material: 'vải bamboo (thoáng mát và không nhăn)',
+        form: 'vải bamboo (thoáng mát và không nhăn)',
+        origin: 'Việt Nam',
+        gender: 'nam',
+        best_seller: 'yes'
+    },
+
 ];
 
 const getAllProducts = () => products;
@@ -643,6 +734,8 @@ const getProducts = (count) => {
     const start = Math.floor(Math.random() * (max - min) + min);
     return products.slice(start, start + count);
 };
+
+const getProductsBestSeller = (e) => products.filter((e) => e.best_seller === 'yes')
 
 const getProductBySlug = (slug) => products.find((e) => e.slug === slug);
 const getProductByGender = (gender) => products.filter((e) => e.gender === gender);
@@ -661,10 +754,11 @@ const getCartItemsDetail = (cartItems) => {
 
 const productData = {
     getAllProducts,
-    getProducts,
     getProductByGender,
+    getProducts,
     getProductBySlug,
     getCartItemsDetail,
+    getProductsBestSeller,
 };
 
 export default productData;

@@ -10,13 +10,16 @@ const BestSellerCard = (props) => {
                     <div className="best-seller__card__image">
                         <img src={props.img01} alt="" />
                         <img src={props.img02} alt="" />
-                        <img src={props.img02} alt="" />
+                        <img src={props.img03} alt="" />
+                        <img src={props.img04} alt="" />
                     </div>
                 </Link>
                 <div className="best-seller__card__info">
                     <h3 className='card-name'>{props.name}</h3>
                     <div className='card-img'>
                         <img src={props.img02} alt="" />
+                        <img src={props.img03} alt="" />
+                        <img src={props.img04} alt="" />
                     </div>
                     <p className='sub-text'>Chỉ từ</p>
                     <div className='price-old'>{numWithCommas(props.price_old)}</div>

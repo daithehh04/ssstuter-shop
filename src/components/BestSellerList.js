@@ -19,13 +19,15 @@ const BestSellerList = () => {
                         arrows: true,
                     }}
                 >
-                    {productData.getAllProducts().map((item, index) => (
+                    {productData.getProductsBestSeller().map((item, index) => (
                         <SplideSlide key={index}>
                             <BestSellerCard
                                 slug={item.slug}
                                 name={item.title}
                                 img01={item.image01}
                                 img02={item.image02}
+                                img03={item.image03}
+                                img04={item.image04}
                                 price={item.price}
                                 price_old={item.price_old}
                             />
