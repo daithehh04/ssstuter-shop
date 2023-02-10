@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import productData from '../assets/data/products'
 import ProductView from '../components/ProductView'
-import ProductCard from '../components/ProductCard'
 import Helmet from '../UI/Helmet'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import Grid from '../UI/Grid'
+import Loading from '../UI/Loading'
+const ProductCard = React.lazy(() => import('../components/ProductCard'))
+
 
 const ProductDetail = () => {
     const { slug } = useParams()
@@ -39,15 +41,17 @@ const ProductDetail = () => {
                 <h3 className='product-detail_list_title'>SẢN PHẨM TƯƠNG TỰ</h3>
                 <Grid col={4} mdCol={2} smCol={1} gap={20}>
                     {relatedProducts.map((item, index) => (
-                        <ProductCard
-                            numColor={item.colors.length}
-                            key={index}
-                            img01={item.image01}
-                            name={item.title}
-                            price={Number(item.price)}
-                            price_old={Number(item.price_old)}
-                            slug={item.slug}
-                        />
+                        <Suspense fallback={<Loading />} key={index}>
+                            <ProductCard
+                                numColor={item.colors.length}
+                                img01={item.image01}
+                                name={item.title}
+                                price={Number(item.price)}
+                                price_old={Number(item.price_old)}
+                                slug={item.slug}
+                            />
+                        </Suspense>
+
                     ))}
                 </Grid>
             </div>
@@ -77,14 +81,16 @@ const ProductDetail = () => {
                     >
                         {productData.getProducts(10).map((item, index) => (
                             <SplideSlide key={index}>
-                                <ProductCard
-                                    img01={item.image01}
-                                    name={item.title}
-                                    numColor={item.colors.length}
-                                    price={Number(item.price)}
-                                    price_old={Number(item.price_old)}
-                                    slug={item.slug}
-                                />
+                                <Suspense fallback={<Loading />}>
+                                    <ProductCard
+                                        img01={item.image01}
+                                        name={item.title}
+                                        numColor={item.colors.length}
+                                        price={Number(item.price)}
+                                        price_old={Number(item.price_old)}
+                                        slug={item.slug}
+                                    />
+                                </Suspense>
                             </SplideSlide>
                         ))}
                     </Splide>

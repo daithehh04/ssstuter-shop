@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react'
-import HeroSlide from '../components/HeroSlide'
 import Helmet from '../UI/Helmet'
-import heroSlideData from '../assets/data/hero-slider'
-import policyData from '../assets/data/policy'
+import Grid from '../UI/Grid'
+import HeroSlide from '../components/HeroSlide'
 import Classify from '../components/Classify'
+import heroSlideData from '../assets/data/hero-slider'
+import OfferTime from '../components/OfferTime'
+import policyData from '../assets/data/policy'
 import NewArrivals from '../components/NewArrivals'
+import BestSellerList from '../components/BestSellerList'
 import PolicyCard from '../components/PolicyCard'
 import SsstuterBg from '../components/SsstuterBg'
-import BestSellerList from '../components/BestSellerList'
-import Grid from '../UI/Grid'
-import OfferTime from '../components/OfferTime'
 
 
 const Home = () => {

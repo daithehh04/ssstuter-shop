@@ -1,26 +1,31 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from '../pages/Home'
-import HimProducts from '../pages/HimProducts'
-import HerProducts from '../pages/HerProducts'
-import ProductDetail from '../pages/ProductDetail'
-import Cart from '../pages/Cart'
-import Checkout from '../pages/Checkout'
-import Success from '../pages/Success'
-import NotFound from '../components/NotFound'
+import Loading from '../UI/Loading'
+const Home = React.lazy(() => import('../pages/Home'))
+const ProductDetail = React.lazy(() => import('../pages/ProductDetail'))
+const HimProducts = React.lazy(() => import('../pages/HimProducts'))
+const HerProducts = React.lazy(() => import('../pages/HerProducts'))
+const Cart = React.lazy(() => import('../pages/Cart'))
+const Checkout = React.lazy(() => import('../pages/Checkout'))
+const NotFound = React.lazy(() => import('../pages/NotFound'))
+const Success = React.lazy(() => import('../pages/Success'))
+
 
 const Routers = () => {
     return (
-        <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/FOR-HIM' element={<HimProducts />} />
-            <Route path='/FOR-HER' element={<HerProducts />} />
-            <Route path='/catalog/:slug' element={<ProductDetail />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/checkout' element={<Checkout />} />
-            <Route path='/success' element={<Success />} />
-            <Route path='*' element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/FOR-HIM' element={<HimProducts />} />
+                <Route path='/FOR-HER' element={<HerProducts />} />
+                <Route path='/catalog/:slug' element={<ProductDetail />} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='/checkout' element={<Checkout />} />
+                <Route path='/success' element={<Success />} />
+                <Route path='*' element={<NotFound />} />
+            </Routes>
+        </Suspense>
+
     )
 }
 

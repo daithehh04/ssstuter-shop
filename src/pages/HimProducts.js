@@ -1,6 +1,5 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+import React, { Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import Helmet from '../UI/Helmet'
-import ProductCard from '../components/ProductCard'
 import productData from '../assets/data/products'
 import category from '../assets/data/category'
 import size from '../assets/data/product-size'
@@ -8,6 +7,9 @@ import color from '../assets/data/product-color'
 import CheckBox from '../components/CheckBox'
 import Button from '../UI/Button'
 import Grid from '../UI/Grid'
+import Loading from '../UI/Loading'
+const ProductCard = React.lazy(() => import('../components/ProductCard'))
+
 const HimProducts = () => {
     const initFilter = {
         category: [],
@@ -158,16 +160,18 @@ const HimProducts = () => {
                 <div className='catalog-content'>
                     <Grid col={3} mdCol={2} smCol={1}>
                         {products.map((item, index) => (
-                            <ProductCard
-                                key={index}
-                                numColor={item.colors.length}
-                                img01={item.image01}
-                                name={item.title}
-                                price_old={item.price_old}
-                                price={Number(item.price)}
-                                slug={item.slug}
-                                sale={item.sale}
-                            />
+                            <Suspense fallback={<Loading />} key={index}>
+                                <ProductCard
+                                    numColor={item.colors.length}
+                                    img01={item.image01}
+                                    name={item.title}
+                                    price_old={item.price_old}
+                                    price={Number(item.price)}
+                                    slug={item.slug}
+                                    sale={item.sale}
+                                />
+                            </Suspense>
+
                         ))}
                     </Grid>
                 </div>
