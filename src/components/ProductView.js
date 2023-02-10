@@ -88,7 +88,7 @@ const ProductView = (props) => {
                     <div className="product-description_info_item">Suất xứ: {product.origin}</div>
                     <Description />
                     <div className="product-description_toggle">
-                        <Button onClick={() => setDescriptionExpand(!descriptionExpand)}>
+                        <Button className='btn-view' onClick={() => setDescriptionExpand(!descriptionExpand)}>
                             {!descriptionExpand ? 'xem thêm' : 'thu gọn'}
                         </Button>
                     </div>
@@ -144,7 +144,7 @@ const ProductView = (props) => {
                 <div className="product-description_info_item">Suất xứ: {product.origin}</div>
                 <Description />
                 <div className="product-description_toggle">
-                    <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
+                    <Button className="btn-view" onClick={() => setDescriptionExpand(!descriptionExpand)}>
                         {!descriptionExpand ? 'xem thêm' : 'thu gọn'}
                     </Button>
                 </div>

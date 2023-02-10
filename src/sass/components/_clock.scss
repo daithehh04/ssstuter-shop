@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 12px 0 20px 24px;
+    margin: 16px auto;
+    max-width: 90%;
     .clock-data {
         margin-right: 24px;
         display: flex;
@@ -18,6 +19,26 @@
         span {
             margin-left: 20px;
             font-size: 3rem;
+        }
+    }
+}
+
+@include mobile {
+    .clock-wrapper {
+        .clock-data {
+            margin-right: 16px;
+            font-size: 1.4rem;
+            &:last-child {
+                margin-right: 0;
+            }
+            &_content {
+                width: 50px;
+                padding: 12px;
+            }
+            span {
+                font-size: 2.4rem;
+                margin-left: 16px;
+            }
         }
     }
 }

@@ -7,8 +7,8 @@ const OfferTime = () => {
     return (
         <div className='offer-wrapper'>
             <div className='offer-title'>
-                <h3>Ưu đãi giới hạn !!!</h3>
-                <p>Giảm giá lên tới 20%</p>
+                <h3>ƯU ĐÃI GIỚI HẠN !!!</h3>
+                <p>GIẢM GIÁ LÊN TỚI 20%</p>
             </div>
             <Clock />
             <Link to='FOR-HIM'>
