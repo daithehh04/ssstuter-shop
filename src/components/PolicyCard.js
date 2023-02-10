@@ -1,7 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+
 const PolicyCard = (props) => {
     return (
-        <div className='policy-card'>
+        <motion.div whileHover={{ scale: 0.9 }} className='policy-card'>
             <div className='policy-card__icon'>
                 <i class={props.icon}></i>
             </div>
@@ -9,7 +11,7 @@ const PolicyCard = (props) => {
                 <div className='card-info__name'>{props.name}</div>
                 <div className='card-info__desc'>{props.desc}</div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

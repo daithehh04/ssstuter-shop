@@ -1,4 +1,4 @@
-const img1 = require('../Image/images/home-1.png');
+const img1 = require('../Image/images/home-1.jpeg');
 const img2 = require('../Image/images/home-2.jpeg');
 const img3 = require('../Image/images/home-3.jpeg');
 const img4 = require('../Image/images/home-4.jpeg');

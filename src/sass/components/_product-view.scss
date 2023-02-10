@@ -77,12 +77,13 @@
         &_item {
             margin: 20px 0;
             &_price__new {
-                color: crimson;
-                font-size: 2.6rem;
-                font-weight: 500;
+                color: #A50A0A;
+                font-size: 2.8rem;
+                font-weight: 600;
             }
             &_price__old {
-                font-size: 2.6rem;
+                font-size: 2.8rem;
+                font-weight: 600;
                 color: #a9a7a7;
                 text-decoration: line-through;
                 margin-left: 90px;

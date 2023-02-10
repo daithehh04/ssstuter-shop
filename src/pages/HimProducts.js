@@ -15,6 +15,7 @@ const HimProducts = () => {
         size: [],
     };
 
+    console.log('loop')
     const productList = productData.getProductByGender('nam');
 
     const [products, setProducts] = useState(productList);
@@ -53,10 +54,6 @@ const HimProducts = () => {
             }
         }
     };
-    const filterRef = useRef()
-    const showHideFilter = () => {
-        filterRef.current.classList.toggle('active');
-    };
 
     const updateProducts = useCallback(() => {
         console.log('updateProducts')
@@ -84,8 +81,14 @@ const HimProducts = () => {
     }, [filter, productList]);
 
     useEffect(() => {
+        console.log('3')
         updateProducts();
     }, [updateProducts]);
+
+    const filterRef = useRef()
+    const showHideFilter = () => {
+        filterRef.current.classList.toggle('active');
+    };
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])

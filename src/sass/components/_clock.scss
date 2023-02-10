@@ -1,0 +1,15 @@
+.clock-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 0 20px 24px;
+    .clock-data {
+        margin-right: 24px;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        span {
+            margin-left: 20px;
+        }
+    }
+}

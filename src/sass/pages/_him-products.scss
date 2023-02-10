@@ -22,7 +22,10 @@
                 text-transform: uppercase;
                 font-size: 1.8rem;
                 font-weight: 600;
-                margin: 20px 0;
+                margin-bottom: 20px;
+            }
+            &_content {
+                margin-bottom: 20px;
             }
         }
         &_close {display: none;}
@@ -35,7 +38,7 @@
         margin-bottom: 30px;
         width: 100%;
             .product-card {
-                margin-bottom: 30px;
+                margin-bottom: 36px;
             }
     }
 }

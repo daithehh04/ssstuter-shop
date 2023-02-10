@@ -9,6 +9,7 @@ import PolicyCard from '../components/PolicyCard'
 import SsstuterBg from '../components/SsstuterBg'
 import BestSellerList from '../components/BestSellerList'
 import Grid from '../UI/Grid'
+import OfferTime from '../components/OfferTime'
 
 
 const Home = () => {
@@ -23,12 +24,6 @@ const Home = () => {
             {/* Classify*/}
             <Classify />
 
-            {/* New Arrivals */}
-            <NewArrivals />
-
-            {/* Best Seller Products */}
-            <BestSellerList />
-
             {/* PolicyCard */}
             <Grid col={4} mdCol={2} smCol={1} gap={20}>
                 {policyData.map((item, index) => (
@@ -40,7 +35,14 @@ const Home = () => {
                     />
                 ))}
             </Grid>
+            {/* New Arrivals */}
+            <NewArrivals />
 
+            {/* Best Seller Products */}
+            <BestSellerList />
+
+            {/* Offer */}
+            <OfferTime />
             {/* Store */}
             <SsstuterBg />
         </Helmet>
