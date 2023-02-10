@@ -1,4 +1,9 @@
 .loading {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @keyframes ldio-06wg3qy5fu0j {
      0% { transform: translate(6px,40px) scale(0); }
     25% { transform: translate(6px,40px) scale(0); }
