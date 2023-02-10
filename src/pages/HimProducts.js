@@ -166,6 +166,7 @@ const HimProducts = () => {
                                 price_old={item.price_old}
                                 price={Number(item.price)}
                                 slug={item.slug}
+                                sale={item.sale}
                             />
                         ))}
                     </Grid>

@@ -122,6 +122,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -141,6 +142,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -160,6 +162,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -179,6 +182,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -198,6 +202,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -217,6 +222,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -236,6 +242,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -255,6 +262,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -274,6 +282,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -293,6 +302,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -312,6 +322,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -331,6 +342,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'no'
     },
     {
@@ -637,6 +649,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'yes'
     },
     {
@@ -658,6 +671,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'yes'
     },
     {
@@ -679,6 +693,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'yes'
     },
     {
@@ -700,6 +715,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'yes'
     },
     {
@@ -721,6 +737,7 @@ const products = [
         form: 'vải bamboo (thoáng mát và không nhăn)',
         origin: 'Việt Nam',
         gender: 'nam',
+        sale: '20%',
         best_seller: 'yes'
     },
 

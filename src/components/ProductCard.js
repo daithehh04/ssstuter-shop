@@ -9,11 +9,19 @@ const ProductCard = (props) => {
             <Link to={`/catalog/${props.slug}`}>
                 <div className="product-card__image">
                     <img src={props.img01} alt="" />
+                    {props.sale ? (<div className='product-card__sale'>
+                        {props.sale}
+                        <div className='product-card__sp'></div>
+                        <div className='product-card__sp'></div>
+                    </div>) : ''}
                 </div>
                 <div className='product-card__info'>
                     <div className='product-card__info__top'>
                         <h3 className="product-card__name">{props.name}</h3>
-                        <span className='product-card__price__old'>{numWithCommas(props.price_old)}</span>
+                        {props.price_old ? (
+                            <span className='product-card__price__old'>{numWithCommas(props.price_old)}</span>
+                        ) : ''}
+
                     </div>
                     <div className='product-card__info__bottom'>
                         <p className='product-card__number__color'>{props.numColor} Colors</p>

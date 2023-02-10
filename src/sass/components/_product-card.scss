@@ -2,8 +2,32 @@
     width: 85%;
     margin: 0 auto;
     &__image {
+        position: relative;
         img {
             object-fit: cover;
+        }
+        .product-card__sale {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            background-color: #C50C0C;
+            font-size: 1.4rem;
+            padding: 6px;
+            .product-card__sp:nth-child(1) {
+                position: absolute;
+                bottom: -20px;
+                border: 12px solid;
+                border-color: #C50C0C transparent transparent #C50C0C;
+                left: 0;
+            }
+            .product-card__sp:nth-child(2) {
+                position: absolute;
+                bottom: -20px;
+                border: 12px solid;
+                border-color: #C50C0C #C50C0C transparent transparent ;
+                right: 0;
+            }
         }
     }
     &__name {

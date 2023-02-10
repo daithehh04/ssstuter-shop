@@ -24,6 +24,15 @@ const Home = () => {
             {/* Classify*/}
             <Classify />
 
+            {/* Offer */}
+            <OfferTime />
+
+            {/* New Arrivals */}
+            <NewArrivals />
+
+            {/* Best Seller Products */}
+            <BestSellerList />
+
             {/* PolicyCard */}
             <Grid col={4} mdCol={2} smCol={1} gap={20}>
                 {policyData.map((item, index) => (
@@ -35,14 +44,7 @@ const Home = () => {
                     />
                 ))}
             </Grid>
-            {/* New Arrivals */}
-            <NewArrivals />
 
-            {/* Best Seller Products */}
-            <BestSellerList />
-
-            {/* Offer */}
-            <OfferTime />
             {/* Store */}
             <SsstuterBg />
         </Helmet>
