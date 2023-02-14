@@ -5,6 +5,7 @@ import '@splidejs/react-splide/css';
 import logo from '../assets/Image/logo.svg'
 import { Link, NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const nav_links = [
     {
@@ -38,6 +39,10 @@ const Header = () => {
     }, []);
 
     const menuToggle = () => menuRef.current.classList.toggle('active');
+
+    const handlerSearch = () => {
+        toast.info('Chức năng đang trong quá trình cập nhật!')
+    }
     return (
         <header className='header' ref={headerRef}>
             <div className='container'>
@@ -75,7 +80,7 @@ const Header = () => {
                     </div>
                     {/* Nav Icons */}
                     <div className='nav-icons'>
-                        <span className='search-icon'>
+                        <span className='search-icon' onClick={handlerSearch}>
                             <i class="ri-search-line"></i>
                         </span>
                         <Link to='/cart'>
