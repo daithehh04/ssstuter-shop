@@ -17,8 +17,8 @@ const HimProducts = () => {
         size: [],
     };
 
-    console.log('loop')
     const productList = productData.getProductByGender('nam');
+    console.log(productList)
 
     const [products, setProducts] = useState(productList);
 
@@ -58,7 +58,6 @@ const HimProducts = () => {
     };
 
     const updateProducts = useCallback(() => {
-        console.log('updateProducts')
         let temp = productList;
 
         if (filter.category.length > 0) {
@@ -83,7 +82,6 @@ const HimProducts = () => {
     }, [filter, productList]);
 
     useEffect(() => {
-        console.log('3')
         updateProducts();
     }, [updateProducts]);
 

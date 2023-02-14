@@ -19,7 +19,7 @@ const payment = [
     {
         id: 2,
         icon: 'ri-wallet-fill',
-        display: 'Thanh toán bằng ví ShopeePay',
+        display: 'Thanh toán bằng ví điện tử (OnePay, MoMo,...)',
     },
     {
         id: 3,
@@ -118,7 +118,7 @@ const Checkout = () => {
                         <div className="checkout-info_item">
                             <input
                                 type="text"
-                                placeholder="* Họ và tên"
+                                placeholder="(*)Họ và tên"
                                 name="username"
                                 value={formValues.username}
                                 onChange={(e) => handleChange(e)}
@@ -128,7 +128,7 @@ const Checkout = () => {
                         <div className="checkout-info_item">
                             <input
                                 type="email"
-                                placeholder="*Email"
+                                placeholder="(*)Email"
                                 name="email"
                                 value={formValues.email}
                                 onChange={(e) => handleChange(e)}
@@ -138,7 +138,7 @@ const Checkout = () => {
                         <div className="checkout-info_item">
                             <input
                                 type="text"
-                                placeholder="* Số điện thoại"
+                                placeholder="(*)Số điện thoại"
                                 name="phoneNumber"
                                 value={formValues.phoneNumber}
                                 onChange={(e) => handleChange(e)}
@@ -151,7 +151,7 @@ const Checkout = () => {
                         <div className="checkout-info_item">
                             <input
                                 type="text"
-                                placeholder="* Số nhà tên đường..."
+                                placeholder="(*)Số nhà tên đường..."
                                 name="address"
                                 value={formValues.address}
                                 onChange={(e) => handleChange(e)}

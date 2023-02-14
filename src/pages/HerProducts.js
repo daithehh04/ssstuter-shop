@@ -61,7 +61,6 @@ const HerProducts = () => {
     };
 
     const updateProducts = useCallback(() => {
-        console.log('updateProducts')
         let temp = productList;
 
         if (filter.category.length > 0) {
@@ -87,7 +86,6 @@ const HerProducts = () => {
 
     useEffect(() => {
         updateProducts();
-        console.log('3')
     }, [updateProducts]);
     useEffect(() => {
         window.scrollTo(0, 0)
